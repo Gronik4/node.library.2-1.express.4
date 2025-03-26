@@ -1,5 +1,7 @@
 import express from 'express';
 import { nanoid } from 'nanoid';
+//const express = require('express');
+//const {nanoid} = require('nanoid');
 
 
 class Book{
@@ -46,9 +48,9 @@ const stor = {
 }
 
 const app = express();
-app.use(express.json);
+//app.use(express.json);
 
-app.post('/api/user/login', (res, req)=>{res.json({ id: 1, mail: "test@mail.ru" })});
+/*app.post('/api/user/login', (res, req)=>{res.json({ id: 1, mail: "test@mail.ru" })});
 app.get('/api/books', (res, req)=>{
   const {books} = stor;
   console.log('id: 1, mail: "test@mail.ru" ');
@@ -57,7 +59,8 @@ app.get('/api/books', (res, req)=>{
 app.get('/api/books/:id', (res, req)=>{});
 app.post('/api/books', (res, req)=>{});
 app.put('/api/books/:id', (res, req)=>{});
-app.delete('/api/books/:id', (res, req)=>{});
+app.delete('/api/books/:id', (res, req)=>{});*/
+app.get('/api/books', (req, res)=> res.send('Hello world!!'));
 
 const port = process.env.PORT || 8080;
 app.listen(port, (err)=>{
@@ -65,5 +68,3 @@ app.listen(port, (err)=>{
     return console.log(`string 65: ${err}`);
   } else {console.log(`Server starting on port ${port}`);}
 });
-/*const {books} = stor;
-console.log(books);*/
