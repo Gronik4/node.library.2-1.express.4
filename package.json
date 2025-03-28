@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "forever index.js",
-    "start": "forever index.js",
-    "watch": "forever -w server.js"
+    "dev": "nodemon index.js",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "forever": "^3.0.4",
     "express": "^4.21.2",
     "nanoid": "^5.1.5"
   },
